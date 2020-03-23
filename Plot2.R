@@ -1,5 +1,9 @@
 library("data.table")
+
+#Set Path
 path <- getwd()
+
+#Download Data
 download.file(url = "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip"
               , destfile = paste(path, "dataFiles.zip", sep = "/"))
 unzip(zipfile = "dataFiles.zip")
@@ -13,6 +17,7 @@ aggTotBaltimore <- aggregate(Emissions ~ year, baltimoreNEI,sum)
 
 png("plot2.png",width=480,height=480,units="px",bg="transparent")
 
+
 barplot(
   aggTotBaltimore$Emissions,
   names.arg=aggTotBaltimore$year,
@@ -22,3 +27,4 @@ barplot(
 )
 
 dev.off()
+
