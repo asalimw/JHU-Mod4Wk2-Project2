@@ -5,11 +5,6 @@ date: "23/03/2020"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## R Markdown
 # Exploratory Data Analysis Project
 
 #### Introduction
